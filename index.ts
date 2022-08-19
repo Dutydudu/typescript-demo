@@ -1,21 +1,13 @@
 let title: string = "MyApp";
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>${title}</h1>
-<hr/>
-<p>Paragrafo qualquer...</p>`;
+document.getElementById('app.title').innerHTML = title;
+
+//Counter
+let counter = 0;
 
 
-//Console.log
-console.log("Ola Mundo");
+let intervalId = setInterval(() => {
+  counter++;
+  document.getElementById('app.counter').innerHTML = counter.toString();
+}, 1000);
 
-//Laco
-for (let i=1; i <=10; i++) {
-  console.log(i);
-}
 
-for (let i=1; i <=10; i++) {
-  if(i % 2 == 0) {
-    console.log(i);
-  }
-  
-}
