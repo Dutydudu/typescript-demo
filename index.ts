@@ -1,6 +1,6 @@
-// Write TypeScript code!
+let title: string = "MyApp";
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+appDiv.innerHTML = `<h1>${title}</h1>`;
 
 
 //Console.log
