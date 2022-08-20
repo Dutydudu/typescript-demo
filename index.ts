@@ -1,24 +1,37 @@
-let title: string = "Tabata";
+let title: string = 'Tabata';
 document.getElementById('app.title').innerHTML = title;
 
-let ciclo: string = "Ciclo";
+let ciclo: string = 'Ciclo';
 document.getElementById('app.ciclo').innerHTML = ciclo;
 
-let temp: string = "Temporizador";
+let temp: string = 'Work';
 document.getElementById('app.temp').innerHTML = temp;
 
-//Counter
-let counter = 0;
+let rest: string = 'Rest';
+document.getElementById('app.rest').innerHTML = rest;
 
+//Counter
+let counter: number = 0;
+
+let restTimer = 0;
+
+let cicloTimer = 0;
 
 let intervalId = setInterval(() => {
   counter++;
-  document.getElementById('app.counter').innerHTML = counter.toString();
-}, 1000);
-
-let intervalIdTemporizador = setInterval(() => {
-  counter+1;
   document.getElementById('app.counterTemp').innerHTML = counter.toString();
-}, 1000);
 
+  if (counter == 20) {
+    counter = 0;
+  }
 
+    if (counter == 20) {
+      restTimer++;
+      document.getElementById('app.counterRest').innerHTML = restTimer.toString();
+    }
+
+      if (restTimer == 10) {
+        cicloTimer++;
+        document.getElementById('app.counter').innerHTML = cicloTimer.toString();
+      }
+}, 100);
